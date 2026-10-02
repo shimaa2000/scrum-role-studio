@@ -4,21 +4,21 @@ An interactive Scrum role explorer for comparing Project Manager, Product Owner,
 
 ## Publishing
 
-GitHub Actions publishes `site/` to GitHub Pages on every push to `main`. In the repository settings, select **Pages → Build and deployment → Source → GitHub Actions** before the first deployment. The workflow can also be run manually from the Actions tab.
+GitHub Actions publishes the static site from the repository root to GitHub Pages on every push to `main`. In the repository settings, select **Pages → Build and deployment → Source → GitHub Actions** before the first deployment. The workflow can also be run manually from the Actions tab.
 
 No build step, npm dependencies, API keys, backend, or ChatGPT subscription are required to run the site.
 
 ## Run locally
 
-    python3 -m http.server 4173 --directory site
+    python3 -m http.server 4173
 
 Open http://localhost:4173.
 
 ## Edit
 
-- `site/index.html`: page content and comparison table
-- `site/styles.css`: styling and responsive layouts
-- `site/app.js`: situations, interview examples, quiz questions, and scoring
+- `index.html`: page content and comparison table
+- `styles.css`: styling and responsive layouts
+- `app.js`: situations, interview examples, quiz questions, and scoring
 - `.github/workflows/deploy.yml`: GitHub Pages deployment
 
 Quiz progress is saved only in each visitor’s browser, when localStorage is available. No analytics or visitor database are included.
